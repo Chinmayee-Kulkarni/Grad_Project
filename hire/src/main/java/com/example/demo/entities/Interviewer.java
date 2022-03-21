@@ -16,8 +16,11 @@ public class Interviewer {
 	private String round_Alloted ;
 	private int no_Of_Interviews;
     private String profile_Image;
+   
     
     
+
+	
 	public String getEmailid() {
 		return emailid;
 	}
@@ -71,7 +74,8 @@ public class Interviewer {
 		// TODO Auto-generated constructor stub
 	}
 	public Interviewer(String emailid, String username, String primary_Skill, String secondary_Skill,
-			String tertiary_Skill, String round_Alloted, int no_Of_Interviews, String profile_Image) {
+			String tertiary_Skill, String round_Alloted, int no_Of_Interviews, String profile_Image,
+			Boolean is_Active) {
 		super();
 		this.emailid = emailid;
 		this.username = username;
@@ -81,16 +85,15 @@ public class Interviewer {
 		this.round_Alloted = round_Alloted;
 		this.no_Of_Interviews = no_Of_Interviews;
 		this.profile_Image = profile_Image;
+		
 	}
 	@Override
 	public String toString() {
 		return "Interviewer [emailid=" + emailid + ", username=" + username + ", primary_Skill=" + primary_Skill
 				+ ", secondary_Skill=" + secondary_Skill + ", tertiary_Skill=" + tertiary_Skill + ", round_Alloted="
-				+ round_Alloted + ", no_Of_Interviews=" + no_Of_Interviews + ", profile_Image=" + profile_Image + "]";
+				+ round_Alloted + ", no_Of_Interviews=" + no_Of_Interviews + ", profile_Image=" + profile_Image
+				+ "";
 	}
-    
-	
-	
 	
 	
 
