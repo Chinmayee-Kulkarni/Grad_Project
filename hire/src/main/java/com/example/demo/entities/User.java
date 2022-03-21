@@ -1,5 +1,4 @@
-package com.application.hirebase.user;
-
+package com.example.demo.entities;
 import javax.persistence.*;
 
 @Entity
