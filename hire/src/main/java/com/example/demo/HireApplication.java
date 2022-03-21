@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.example.demo.dao.Interviewer_Repository;
+import com.example.demo.dao.background_Repository;
 import com.example.demo.entities.Interviewer;
+import com.example.demo.entities.background_sync;
 
 
 
