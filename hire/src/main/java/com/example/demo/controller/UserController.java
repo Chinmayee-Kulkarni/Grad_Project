@@ -1,9 +1,10 @@
-package com.application.hirebase.user;
+package com.example.demo.controller;
 
 
-import com.application.hirebase.user.User;
-import com.application.hirebase.user.UserService;
-import org.apache.coyote.Response;
+
+import com.example.demo.entities.User;
+
+import com.example.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
