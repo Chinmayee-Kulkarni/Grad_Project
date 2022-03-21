@@ -1,10 +1,12 @@
-package com.application.hirebase.user;
+package com.example.demo.dao;
 
-import com.application.hirebase.user.User;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import com.example.demo.entities.User;
 
 import java.util.List;
 
