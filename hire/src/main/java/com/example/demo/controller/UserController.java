@@ -2,6 +2,13 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+
+import com.example.demo.entities.User;
+
+import com.example.demo.services.UserService;
+>>>>>>> 8f77dbb8628309a9d136cd632cbd3ed1421a35e2
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
