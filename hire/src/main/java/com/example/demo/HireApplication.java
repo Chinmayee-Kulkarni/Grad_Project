@@ -26,6 +26,7 @@ public class HireApplication {
 		i2.setSecondary_Skill("cpp");
 		i2.setTertiary_Skill("python");
 		i2.setUsername("Chinmayee");
+	    i2.setUserId(1);
 		i1.save(i2);
 		
 		

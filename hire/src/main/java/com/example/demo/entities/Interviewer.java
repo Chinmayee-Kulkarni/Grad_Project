@@ -7,8 +7,9 @@ import javax.persistence.Id;
 public class Interviewer {
 	
 	@Id
-	private String emailid;
+	private int userId;
 	
+	private String emailid;
 	private String username;
 	private String primary_Skill;
 	private String secondary_Skill;
@@ -18,7 +19,7 @@ public class Interviewer {
     private String profile_Image;
    
     
-    
+  
 
 	
 	public String getEmailid() {
@@ -69,14 +70,20 @@ public class Interviewer {
 	public void setProfile_Image(String profile_Image) {
 		this.profile_Image = profile_Image;
 	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	public Interviewer() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Interviewer(String emailid, String username, String primary_Skill, String secondary_Skill,
-			String tertiary_Skill, String round_Alloted, int no_Of_Interviews, String profile_Image,
-			Boolean is_Active) {
+	public Interviewer(int userId, String emailid, String username, String primary_Skill, String secondary_Skill,
+			String tertiary_Skill, String round_Alloted, int no_Of_Interviews, String profile_Image) {
 		super();
+		this.userId = userId;
 		this.emailid = emailid;
 		this.username = username;
 		this.primary_Skill = primary_Skill;
@@ -85,16 +92,6 @@ public class Interviewer {
 		this.round_Alloted = round_Alloted;
 		this.no_Of_Interviews = no_Of_Interviews;
 		this.profile_Image = profile_Image;
-		
-	}
-	@Override
-	public String toString() {
-		return "Interviewer [emailid=" + emailid + ", username=" + username + ", primary_Skill=" + primary_Skill
-				+ ", secondary_Skill=" + secondary_Skill + ", tertiary_Skill=" + tertiary_Skill + ", round_Alloted="
-				+ round_Alloted + ", no_Of_Interviews=" + no_Of_Interviews + ", profile_Image=" + profile_Image
-				+ "";
 	}
 	
-	
-
 }
