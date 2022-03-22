@@ -1,8 +1,5 @@
 package com.example.demo.entities;
-<<<<<<< HEAD
-=======
 
->>>>>>> 8f77dbb8628309a9d136cd632cbd3ed1421a35e2
 import javax.persistence.*;
 
 @Entity
