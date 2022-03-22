@@ -1,7 +1,12 @@
 package com.example.demo.controller;
 
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,28 +27,73 @@ public class interviewer_controller {
 	
 	 
 	@GetMapping("/interviewer/{id}")
-	public  Interviewer getbyid(@PathVariable("id")String id)
+	public  ResponseEntity<Interviewer> getbyid(@PathVariable("id")String id)
 	{
-		
-		return is.getbyid(id);
+		Interviewer int1=is.getbyid(id);
+		if(int1==null)
+		{
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+		else
+		{
+	    return ResponseEntity.status(HttpStatus.FOUND).body(int1);
+		}
 	}
+	
+	 
+	@GetMapping("/interviewerall/")
+	public  ResponseEntity<List<Interviewer>> getall()
+	{
+	    List<Interviewer> list=is.getall();
+	    if(list.size()<=0)
+	    {
+	    	return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+	    }
+		return ResponseEntity.of(Optional.of(list));
+	}
+	
+	//@GetMapping("/interviewer/byusername/{username}")
+	//public  Interviewer getbyname(@PathVariable("username")String username)
+	//{
+		
+		//return is.getbyname(username);
+	//}
 	
 	
 	@DeleteMapping("/interviewer/{id}")
-	public  void deletebyid(@PathVariable("id")String id)
+	public  ResponseEntity<Interviewer> deletebyid(@PathVariable("id")String id)
 	{
 		
-		 is.deletebyid(id);
-		 System.out.print("deleted successfully");
+		Interviewer int1=is.deletebyid(id);
+		if(int1==null)
+		{
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+		else
+		{
+	    return ResponseEntity.status(HttpStatus.FOUND).body(int1);
+		}
 	}
 	
+
+
+
 	@PutMapping("/interviewer/{id}")
-	public  Interviewer updatebyid(@RequestBody Interviewer int1,@PathVariable("id")String id)
+	public  ResponseEntity<Interviewer> updatebyid(@RequestBody Interviewer int1,@PathVariable("id")String id)
 	{
-		
+
+		Interviewer int2=is.updatebyid(int1,id);
+		if(int2==null)
+		{
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+		}
+		else
+		{
+	    return ResponseEntity.status(HttpStatus.FOUND).body(int2);
+		}
 		 
-		 System.out.print("updated successfully");
-		 return is.updatebyid(int1,id);
+		
+		
 	}
 	
 	
