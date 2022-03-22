@@ -27,7 +27,7 @@ public class interviewer_controller {
 	
 	 
 	@GetMapping("/interviewer/{id}")
-	public  ResponseEntity<Interviewer> getbyid(@PathVariable("id")String id)
+	public  ResponseEntity<Interviewer> getbyid(@PathVariable("id")int id)
 	{
 		Interviewer int1=is.getbyid(id);
 		if(int1==null)
@@ -61,7 +61,7 @@ public class interviewer_controller {
 	
 	
 	@DeleteMapping("/interviewer/{id}")
-	public  ResponseEntity<Interviewer> deletebyid(@PathVariable("id")String id)
+	public  ResponseEntity<Interviewer> deletebyid(@PathVariable("id")int id)
 	{
 		
 		Interviewer int1=is.deletebyid(id);
@@ -79,10 +79,10 @@ public class interviewer_controller {
 
 
 	@PutMapping("/interviewer/{id}")
-	public  ResponseEntity<Interviewer> updatebyid(@RequestBody Interviewer int1,@PathVariable("id")String id)
+	public  ResponseEntity<Interviewer> updatebyid(@RequestBody Interviewer int1,@PathVariable("id")int id)
 	{
 
-		Interviewer int2=is.updatebyid(int1,id);
+		Interviewer int2=is.updatebyid(int1, id);
 		if(int2==null)
 		{
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
