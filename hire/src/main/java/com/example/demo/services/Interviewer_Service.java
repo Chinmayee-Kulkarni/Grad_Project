@@ -91,6 +91,20 @@ public class Interviewer_Service {
 		
 	  return i3;
 	}
+
+
+
+
+
+
+
+	public Interviewer create(Interviewer int1) {
+		// TODO Auto-generated method stub
+		
+		i1.save(int1);
+		return int1;
+		
+	}
 	
 }
 	
